@@ -1,0 +1,310 @@
+.about {
+    min-height: calc(100vh - 70px);
+    padding: 90px 10%;
+    background-color: #F8F7F4;
+    overflow: hidden;
+}
+
+.aboutContainer {
+    max-width: 1150px;
+    min-height: 70vh;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* LEFT SIDE */
+
+.aboutText {
+    animation: slideLeft 0.8s ease forwards;
+}
+
+.label {
+    color: #E85D3F;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.aboutText h1 {
+    max-width: 650px;
+
+    font-size: clamp(40px, 5vw, 65px);
+    line-height: 1.05;
+
+    margin: 18px 0 25px;
+}
+
+.aboutText h1 span {
+    color: #E85D3F;
+}
+
+.aboutText > p {
+    max-width: 620px;
+
+    color: #71717A;
+    font-size: 17px;
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+
+/* STATS */
+
+.stats {
+    display: flex;
+    gap: 45px;
+
+    margin-top: 40px;
+}
+
+.stat h2 {
+    font-size: 30px;
+    color: #18181B;
+}
+
+.stat p {
+    margin-top: 3px;
+    color: #71717A;
+    font-size: 13px;
+}
+
+
+/* RIGHT VISUAL */
+
+.visual {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 450px;
+
+    animation: slideRight 0.8s ease forwards;
+}
+
+.card {
+    position: relative;
+    z-index: 2;
+
+    width: 330px;
+    height: 420px;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: #18181B;
+    color: white;
+
+    border-radius: 20px;
+
+    transform: rotate(4deg);
+
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+.card:hover {
+    transform: rotate(0deg) translateY(-8px);
+
+    box-shadow:
+        0 25px 50px rgba(24, 24, 27, 0.2);
+}
+
+
+/* CARD TOP */
+
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardTop > span {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #E85D3F;
+
+    font-weight: bold;
+}
+
+.cardTop div {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.cardTop small {
+    color: #A1A1AA;
+    font-size: 9px;
+}
+
+.cardTop strong {
+    color: #E85D3F;
+    font-size: 12px;
+}
+
+
+/* CARD MAIN */
+
+.cardMain p {
+    color: #A1A1AA;
+    margin-bottom: 5px;
+}
+
+.cardMain h2 {
+    font-size: 52px;
+    line-height: 0.95;
+    margin-bottom: 15px;
+}
+
+.cardMain > span {
+    color: #E85D3F;
+    font-size: 14px;
+}
+
+
+/* TECHNOLOGIES */
+
+.tech {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tech span {
+    padding: 7px 12px;
+
+    border: 1px solid #3F3F46;
+    border-radius: 20px;
+
+    color: #D4D4D8;
+    font-size: 11px;
+}
+
+
+/* DECORATION */
+
+.circle {
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    border-radius: 50%;
+
+    background-color: #E85D3F;
+
+    right: 10px;
+    bottom: 30px;
+
+    opacity: 0.15;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .about {
+        padding: 70px 30px;
+    }
+
+    .aboutContainer {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .visual {
+        min-height: 430px;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+    .about {
+        padding: 60px 20px;
+    }
+
+    .aboutText h1 {
+        font-size: 40px;
+    }
+
+    .aboutText > p {
+        font-size: 15px;
+    }
+
+    .stats {
+        gap: 25px;
+    }
+
+    .stat h2 {
+        font-size: 24px;
+    }
+
+    .visual {
+        min-height: 380px;
+    }
+
+    .card {
+        width: 280px;
+        height: 360px;
+        padding: 25px;
+    }
+
+    .cardMain h2 {
+        font-size: 43px;
+    }
+
+    .circle {
+        width: 200px;
+        height: 200px;
+    }
+}
