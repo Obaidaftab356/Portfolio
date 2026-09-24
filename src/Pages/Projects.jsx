@@ -15,6 +15,26 @@ export default function Projects() {
       <div className={styles.projectContainer}>
 
         <div className={styles.card}>
+          <h2>Coffee Shop</h2>
+
+          <p>
+            A modern coffee shop that brings together premium coffee,
+            delicious flavors, and a cozy atmosphere.
+          </p>
+
+          <p className={styles.tech}>
+            React.js • CSS • JavaScript
+          </p>
+
+          <button
+            onClick={() =>
+              window.open("https://coffee-website-obaid9.vercel.app", "_blank")
+            }
+          >
+            View Project
+          </button>
+        </div>
+        <div className={styles.card}>
           <h2>AI Interior Design</h2>
 
           <p>
